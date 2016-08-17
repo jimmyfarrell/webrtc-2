@@ -1,5 +1,6 @@
-export function test(){
+export function test(chatId){
   return {
-    type: "TEST"
+    chatId,
+    type: "TEST",
   }
 }
