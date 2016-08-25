@@ -5,6 +5,7 @@ import { browserHistory } from 'react-router';
 import rootReducer from './reducers/index';
 
 const defaultState = {
+  isCaller: false
 };
 
 const store = createStore(rootReducer, defaultState);

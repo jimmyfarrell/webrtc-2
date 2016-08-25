@@ -1,6 +1,6 @@
-export function test(chatId){
+export function setCaller(isCaller) {
   return {
-    chatId,
-    type: "TEST",
+    type: 'SET_CALLER',
+    isCaller
   }
 }

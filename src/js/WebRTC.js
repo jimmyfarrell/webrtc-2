@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 
 import App from './components/App';
 import Layout from './components/Layout';
+import Video from './components/Video';
 
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
@@ -15,6 +16,7 @@ const router = (
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Layout}></IndexRoute>
+        <Route path="/call/:callId" component={Video}></Route>
       </Route>
     </Router>
   </Provider>

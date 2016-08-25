@@ -1,16 +1,18 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-const rootReducer = combineReducers({ routing: routerReducer, test });
+const rootReducer = combineReducers({ routing: routerReducer, isCaller });
 
-function test(state = {}, action){
-  if(action.type === "TEST") {
-    console.log(state);
-    return Object.assign({}, state, {
-      chatId: action.chatId
-    })
+function isCaller(state = {}, action) {
+  switch (action.type) {
+    case 'SET_CALLER':
+      return {
+        ...state,
+        isCaller: action.isCaller
+      }
+    default:
+      return state;
   }
-  return state;
 }
 
 export default rootReducer;
